@@ -1,1 +1,14 @@
+<script>
+document.cookie = 'refreshed=1';
+//データを1つずつに分ける
+var r = document.cookie.split(';');
 
+r.forEach(function(value) {
+
+    //cookie名と値に分ける
+    var content = value.split('=');
+
+    console.log( content[1] );
+})
+</script>
+<h1> Hello World! This is page 1 </h1>
