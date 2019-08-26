@@ -1,30 +1,26 @@
 <script>
-//データを1つずつに分ける
-var r = document.cookie.split(';');
-
-r.forEach(function(value) {
-
-    //cookie名と値に分ける
-    var content = value.split('=');
-		var refreshed = content[1]
-    console.log( content[1] );
+var cos = document.cookie.split(';');
+cos.forEach(function(value) {
+    var co = value.split('=');
+		var refreshed = co[1]
+    console.log( co[1] );
 		if (refreshed) {
 			console.log("true")
 			var a = Math.floor( Math.random() * 3 ) ;
 			if (a){
-				document.write("You won't be redirected")
+				document.write("<h2>You won't be redirected</h2>")
 			} else {
-				document.write("You will be redirected in 5sec.. ")
+				document.write("<h2>You will be redirected in 5sec.. <h2>")
 				setTimeout(function(){
 				 window.location.href = 'https://twitter.com/raspi0124';
-				}, 5*1000);
+			 }, 5*1000);
 			}
 		}
 		else {
 			console.log("false")
-			document.write("It's your first time visit! No redirecting! ちょっとリフレッシュしてみよう!33%の確率でリダイレクトされるよ!")
+			document.write("<h2>It's your first time visit! No redirecting! ちょっとリフレッシュしてみよう!33%の確率でリダイレクトされるよ!<h2>")
 		}
 })
 document.cookie = 'refreshed=1';
 </script>
-<h1> Hello World! This is page 1. リフレッシュを何回かしてみよう! 33%の確率でリフレッシュされるよ!</h1>
+<h1> Hello World! リフレッシュを何回かしてみよう! 33%の確率でリフレッシュされるよ!</h1>
