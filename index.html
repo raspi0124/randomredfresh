@@ -10,6 +10,15 @@ r.forEach(function(value) {
     console.log( content[1] );
 		if (refreshed) {
 			console.log("true")
+			var a = Math.floor( Math.random() * 3 ) ;
+			if (a){
+				document.write("You won't be redirected")
+			} else {
+				document.write("You will be redirected in 5sec.. ")
+				setTimeout(function(){
+				 window.location.href = 'https://google.com/';
+				}, 5*1000);
+			}
 		}
 		else {
 			console.log("false")
