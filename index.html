@@ -1,5 +1,4 @@
 <script>
-document.cookie = 'refreshed=1';
 //データを1つずつに分ける
 var r = document.cookie.split(';');
 
@@ -9,9 +8,13 @@ r.forEach(function(value) {
     var content = value.split('=');
 		var refreshed = content[1]
     console.log( content[1] );
-		if (refreshed=2) {
+		if (refreshed) {
 			console.log("true")
 		}
+		else {
+			console.log("false")
+		}
 })
+document.cookie = 'refreshed=1';
 </script>
 <h1> Hello World! This is page 1 </h1>
